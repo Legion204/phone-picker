@@ -10,16 +10,63 @@
 </head>
 
 <body>
-<header>
+    <header class="container mx-auto">
+        <!-- nav start here -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <a class="btn btn-ghost text-xl">Phone picker</a>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn bg-[#0D6EFD] text-white">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+        <!-- banner starts here -->
+        <div class="relative">
+            <div class="hero min-h-screen bg-base-200">
+                <div class="hero-content text-center">
+                    <div class="max-w-3xl">
+                        <h1 class="text-5xl font-bold">Find your desired phone</h1>
+                        <p class="py-6">There are many variations of passages of Lorem Ipsum available, but the majority
+                            have suffered alteration in some form, by injected humou.</p>
+                        <button class="btn bg-[#0D6EFD] text-white">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- banner images -->
+            <!-- <div class="flex justify-center items-baseline absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[10%]">
+                <img src="images/phoneSmall.png" alt="">
+                <img src="images/phoneBig.png" alt="">
+                <img src="images/phoneSmall.png" alt="">
+            </div> -->
+        </div>
+    </header>
+    <main class="container mx-auto">
+        <!-- search bar -->
+        <section class="text-center">
+            <h1 class="font-semibold text-4xl my-8">Search your phone</h1>
+            <input id="search-area" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+            <button onclick="handelSearch()" class="btn bg-[#0D6EFD] text-white mb-8">Search</button>
+        </section>
+        <!-- loading spinner -->
 
-</header>
-<main>
+        <!-- phones card container/search result -->
+        <section class="grid justify-evenly">
+            <div class="text-center">
+                <span id="loading-spinner" class="loading loading-spinner loading-lg w-16 m-10 hidden"></span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-6" id="phone-container">
+            </div>
+            <div class="m-5 text-center">
+                <button id="show-all-btn" onclick="showAll()" class="btn bg-[#0D6EFD] text-white hidden">Show All</button>
+            </div>
+        </section>
+    </main>
+    <footer>
 
-</main>
-<footer>
-
-</footer>
-<script src="js/index.js"></script>
+    </footer>
+    <script src="js/index.js"></script>
 </body>
 
 </html>
